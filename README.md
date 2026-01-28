@@ -1,2 +1,2 @@
 # My-CV
-WebSIte Portopolioku
+WebSite Portopolioku
