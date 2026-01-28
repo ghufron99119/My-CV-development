@@ -1,5 +1,3 @@
-/* Gaya untuk skip link yang terlihat saat fokus keyboard */
-/* .skip-link: Gaya untuk tautan aksesibilitas yang biasanya tersembunyi tetapi muncul saat difokuskan */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -8,7 +6,7 @@
   height: 1px;
   overflow: hidden;
 }
-/* Gaya saat skip link difokuskan atau diaktifkan */
+
 .skip-link:focus,
 .skip-link:active {
   left: 1rem;
@@ -22,16 +20,12 @@
   z-index: 9999;
 }
 
-/* Visible focus styles for keyboard users */
-/* :focus-visible: Gaya fokus yang terlihat untuk pengguna keyboard */
 :focus-visible {
   outline: 3px solid var(--accent-color);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
-/* Respect reduced motion preference */
-/* @media (prefers-reduced-motion: reduce): Menghormati preferensi pengguna untuk mengurangi gerakan animasi */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
@@ -39,30 +33,28 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+
   body::before {
     animation: none !important;
     transition: none !important;
   }
 }
 
-/* Vanta.js background for hero section */
 #home {
   position: relative;
-  overflow: hidden; /* Ensure the background doesn't overflow */
-  min-height: 100vh; /* Ensure full viewport height */
-  z-index: 1; /* Normal z-index for the section */
+  overflow: hidden;
+  min-height: 100vh;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Ensure content remains visible and accessible */
-#home > div {
+#home>div {
   position: relative;
-  z-index: 10; /* Ensure content is above the background effects */
+  z-index: 10;
 }
 
-/* 3D Floating Elements Container */
 #floating-elements-container {
   position: absolute !important;
   top: 0 !important;
@@ -75,7 +67,6 @@
   border-radius: 0.5rem !important;
 }
 
-/* 3D Services Container */
 #services-3d-container {
   position: absolute !important;
   top: 0 !important;
@@ -89,7 +80,6 @@
   margin-bottom: -100px !important;
 }
 
-/* Portfolio 3D Containers */
 .portfolio-3d-container {
   position: absolute !important;
   top: 0 !important;
@@ -103,7 +93,6 @@
   border-radius: 0.5rem !important;
 }
 
-/* Contact 3D Container */
 #contact-3d-container {
   position: absolute !important;
   top: 0 !important;
@@ -117,8 +106,6 @@
   margin-bottom: -100px !important;
 }
 
-/* Enhanced 3D Transforms and Transitions */
-/* Improved 3D transforms for interactive elements */
 .transform-3d {
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -128,7 +115,6 @@
   transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
 }
 
-/* Enhanced card hover effects with 3D perspective */
 .card-3d {
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -141,7 +127,6 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
 }
 
-/* Portfolio card 3D effect */
 .portfolio-card-3d {
   transform-style: preserve-3d;
   transition: transform 0.5s ease, box-shadow 0.4s ease;
@@ -153,7 +138,6 @@
   box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
 }
 
-/* Service card 3D effect */
 .service-card-3d {
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
@@ -166,7 +150,6 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
 }
 
-/* Enhanced button 3D effect */
 .button-3d {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateZ(0);
@@ -197,7 +180,6 @@
   transform: translateX(100%);
 }
 
-/* Image hover 3D transformation */
 .image-3d {
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
@@ -207,17 +189,14 @@
   transform: translateZ(20px) scale(1.05);
 }
 
-/* Backface visibility for 3D elements */
 .backface-hidden {
   backface-visibility: hidden;
 }
 
-/* Enhanced perspective for sections */
 .section-3d {
   perspective: 1200px;
 }
 
-/* Tilt effect for interactive elements */
 .tilt-effect {
   transition: transform 0.4s ease;
 }
@@ -226,7 +205,6 @@
   transform: rotateX(5deg) rotateY(5deg) translateY(-5px);
 }
 
-/* Enhanced hover states for links */
 .link-3d {
   position: relative;
   display: inline-block;
@@ -238,7 +216,6 @@
   transform: translateZ(15px) translateY(-2px);
 }
 
-/* Enhanced Mouse Tracking Animations */
 #custom-cursor {
   position: fixed !important;
   width: 20px !important;
@@ -270,7 +247,6 @@
   top: -100px !important;
 }
 
-/* Responsive adjustments for different screen sizes */
 @media (max-width: 768px) {
   #home {
     min-height: auto;
@@ -285,29 +261,24 @@
     padding-bottom: 3rem;
   }
 }
-/* ========== PENGATURAN GAYA MODERN & ELEGAN ========== */
-/* :root: Mendefinisikan variabel CSS yang bisa digunakan di seluruh dokumen */
+
 :root {
-  /* Warna aksen default yang dapat diubah oleh pengguna */
-  --accent-color: #8b5cf6; /* Violet */
+  --accent-color: #8b5cf6;
   --accent-rgb: 139, 92, 246;
 
-  /* Font families */
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Poppins", sans-serif;
   --font-mono: "Fira Code", monospace;
 }
-/* Gaya dasar untuk body */
+
 body {
-  font-family: var(--font-primary); /* Font utama untuk tampilan profesional */
-  background-color: #0f172a; /* Warna dasar slate-900 */
-  color: #cbd5e1; /* Warna teks default slate-300 */
-  overflow-x: hidden; /* Mencegah scroll horizontal */
-  transition: background-color 0.5s ease, color 0.5s ease; /* Transisi halus untuk perubahan warna */
+  font-family: var(--font-primary);
+  background-color: #0f172a;
+  color: #cbd5e1;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Efek latar belakang gradien radial yang bergerak halus */
-/* body::before: Element pseudo untuk efek latar belakang animasi */
 body::before {
   content: "";
   position: fixed;
@@ -315,47 +286,42 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Membuat dua gradien radial untuk efek latar belakang yang dinamis */
-  background-image: radial-gradient(
-      circle at 15% 15%,
+  background-image: radial-gradient(circle at 15% 15%,
       rgba(var(--accent-rgb), 0.2) 0%,
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
+      transparent 25%),
+    radial-gradient(circle at 85% 75%,
       rgba(37, 99, 235, 0.2) 0%,
-      transparent 25%
-    );
-  animation: subtle-glow 20s ease-in-out infinite; /* Animasi perlahan untuk efek bergerak */
-  z-index: -1; /* Di belakang konten utama */
-  transition: opacity 0.5s ease; /* Transisi untuk mengubah opasitas */
-  transform: translateZ(0); /* Enable hardware acceleration */
-  will-change: transform; /* Optimize for animations */
+      transparent 25%);
+  animation: subtle-glow 20s ease-in-out infinite;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-/* @keyframes subtle-glow: Mendefinisikan animasi perubahan transformasi dan opasitas */
 @keyframes subtle-glow {
   0% {
     transform: scale(1) translate(0, 0);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.5) translate(20px, -20px);
     opacity: 0.8;
   }
+
   100% {
     transform: scale(1) translate(0, 0);
     opacity: 1;
   }
 }
 
-/* Custom animations for enhanced scroll effects */
-/* Fade-in animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -367,6 +333,7 @@ body::before {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -378,6 +345,7 @@ body::before {
     opacity: 0;
     transform: translateY(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -389,6 +357,7 @@ body::before {
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -400,6 +369,7 @@ body::before {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -411,6 +381,7 @@ body::before {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -422,6 +393,7 @@ body::before {
     transform: translate3d(0, 100%, 0);
     visibility: visible;
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
@@ -432,6 +404,7 @@ body::before {
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
@@ -442,6 +415,7 @@ body::before {
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
@@ -452,12 +426,12 @@ body::before {
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
+
   to {
     transform: translate3d(0, 0, 0);
   }
 }
 
-/* Apply custom animations */
 .animated {
   animation-duration: 0.8s;
   animation-fill-mode: both;
@@ -503,13 +477,11 @@ body::before {
   animation-name: slideInRight;
 }
 
-/* Parallax effect for background elements */
 .parallax-element {
   transform: translateZ(0) translateY(0);
   will-change: transform;
 }
 
-/* Enhanced hover animations */
 .hover-lift {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -519,8 +491,8 @@ body::before {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile optimizations */
 @media (max-width: 768px) {
+
   #floating-elements-container,
   #services-3d-container,
   #contact-3d-container,
@@ -528,7 +500,6 @@ body::before {
     display: none;
   }
 
-  /* Simplified animations for mobile */
   .transform-3d,
   .card-3d,
   .portfolio-card-3d,
@@ -545,14 +516,15 @@ body::before {
   }
 }
 
-/* Float effect for subtle animations */
 @keyframes float {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -562,14 +534,15 @@ body::before {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Pulse effect for call-to-action elements */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(var(--accent-rgb), 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0);
   }
@@ -579,214 +552,180 @@ body::before {
   animation: pulse 2s infinite;
 }
 
-/* Kelas utilitas untuk efek glassmorphism */
-/* .glass-effect: Menciptakan efek kaca buram */
 .glass-effect {
-  background: rgba(30, 41, 59, 0.5); /* slate-800 dengan opasitas */
-  backdrop-filter: blur(12px); /* Efek blur latar belakang */
-  -webkit-backdrop-filter: blur(12px); /* Support untuk Safari */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Border transparan */
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Fallback for browsers without backdrop-filter support */
-/* @supports: Memberikan fallback untuk browser yang tidak mendukung backdrop-filter */
-@supports not (
-  (-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))
-) {
+@supports not ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
   .glass-effect {
-    background: rgba(
-      30,
-      41,
-      59,
-      0.92
-    ); /* Background gelap dengan opasitas tinggi */
+    background: rgba(30, 41, 59, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
+
   .light .glass-effect {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.96
-    ); /* Background terang untuk mode terang */
+    background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(0, 0, 0, 0.06);
   }
 }
 
-/* Kustomisasi Typed.js cursor */
-/* .typed-cursor: Gaya untuk kursor animasi Typed.js */
 .typed-cursor {
-  color: var(--accent-color); /* Warna sesuai warna aksen */
-  animation: typedjsBlink 0.7s infinite; /* Animasi kedip */
+  color: var(--accent-color);
+  animation: typedjsBlink 0.7s infinite;
 }
-/* @keyframes typedjsBlink: Animasi kedipan kursor Typed.js */
+
 @keyframes typedjsBlink {
   50% {
-    opacity: 0; /* Kursor menghilang setengah dari waktu */
+    opacity: 0;
   }
 }
 
-/* Kustomisasi scrollbar agar sesuai tema */
-/* ::-webkit-scrollbar: Gaya untuk track scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-/* ::-webkit-scrollbar-track: Gaya untuk bagian track scrollbar */
+
 ::-webkit-scrollbar-track {
   background: #0f172a;
 }
-/* ::-webkit-scrollbar-thumb: Gaya untuk thumb scrollbar */
+
 ::-webkit-scrollbar-thumb {
   background-color: #334155;
   border-radius: 10px;
   border: 2px solid #0f172a;
 }
-/* ::-webkit-scrollbar-thumb:hover: Gaya untuk thumb scrollbar saat hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-color);
 }
 
-/* Helper classes untuk warna aksen dari JavaScript */
-/* .accent-bg: Latar belakang warna aksen */
 .accent-bg {
   background-color: var(--accent-color);
 }
-/* .accent-text: Teks warna aksen */
+
 .accent-text {
   color: var(--accent-color);
   transition: transform 0.4s ease;
 }
-/* .accent-border: Border warna aksen */
+
 .accent-border {
   border-color: var(--accent-color);
 }
-/* .accent-shadow: Bayangan warna aksen */
+
 .accent-shadow {
   box-shadow: 0 4px 20px 0 rgba(var(--accent-rgb), 0.35);
 }
-/* .accent-ring:focus: Bayangan cincin saat fokus */
+
 .accent-ring:focus {
   --tw-ring-color: var(--accent-color);
 }
 
-/* Project Card Hover Effects - Dark Mode */
-/* .group: Kelas untuk efek hover pada kartu proyek */
 .group {
   transition: all 0.3s ease;
 }
-/* .group:hover: Efek saat kartu dihover */
+
 .group:hover {
-  transform: translateY(-4px); /* Sedikit naik saat hover */
-  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.25); /* Bayangan lebih dalam */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.25);
 }
-/* .group:hover .bg-slate-700: Mengubah warna background saat hover */
+
 .group:hover .bg-slate-700 {
   background-color: var(--accent-color);
   color: white;
 }
-/* .group:hover .text-slate-300: Mengubah warna teks saat hover */
+
 .group:hover .text-slate-300 {
   color: #f1f5f9;
 }
-/* .group:hover .text-slate-400: Mengubah warna teks saat hover */
+
 .group:hover .text-slate-400 {
   color: #e2e8f0;
 }
-/* View Project link hover effect */
-/* .group a[href^="#"]:hover: Efek hover untuk tautan proyek */
+
 .group a[href^="#"]:hover {
   color: var(--accent-color);
   text-shadow: 0 0 8px rgba(var(--accent-rgb), 0.3);
 }
 
-/* ========== LIGHT MODE STYLES START ========== */
-/* @keyframes vision-gradient: Animasi untuk efek gradien di mode terang */
 @keyframes vision-gradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-/* body.light: Gaya untuk mode terang */
 body.light {
-  background-color: #f0f9ff; /* sky-50 sebagai fallback */
-  color: #1e293b; /* slate-800 */
-  background: linear-gradient(
-    -45deg,
-    #c9f9df,
-    #c2efff,
-    #fff8cc
-  ); /* Gradien warna lembut */
-  background-size: 400% 400%; /* Ukuran untuk animasi gradien */
-  animation: vision-gradient 15s ease infinite; /* Animasi perubahan gradien */
+  background-color: #f0f9ff;
+  color: #1e293b;
+  background: linear-gradient(-45deg,
+      #c9f9df,
+      #c2efff,
+      #fff8cc);
+  background-size: 400% 400%;
+  animation: vision-gradient 15s ease infinite;
 }
 
-/* body.light::before: Menyembunyikan efek latar belakang animasi di mode terang */
 body.light::before {
   opacity: 0;
   display: none;
 }
 
-/* Text colors */
-/* .light .text-slate-100, .light .text-slate-200: Warna teks di mode terang */
 .light .text-slate-100,
 .light .text-slate-200 {
-  color: #0f172a; /* slate-900 */
+  color: #0f172a;
 }
-/* .light .text-slate-300: Warna teks di mode terang */
+
 .light .text-slate-300 {
-  color: #334155; /* slate-700 */
+  color: #334155;
 }
-/* .light .text-slate-400, .light .text-slate-500: Warna teks di mode terang */
+
 .light .text-slate-400,
 .light .text-slate-500 {
-  color: #475569; /* slate-600 */
+  color: #475569;
 }
-/* .light .nav-link, .light #mobile-menu a: Warna link navigasi di mode terang */
+
 .light .nav-link,
 .light #mobile-menu a {
   color: #334155;
 }
-/* .light .nav-link:hover, .light #mobile-menu a:hover: Warna link navigasi saat hover di mode terang */
+
 .light .nav-link:hover,
 .light #mobile-menu a:hover {
   background-color: rgba(0, 0, 0, 0.05);
   color: #0f172a;
 }
 
-/* Glass effect */
-/* .light .glass-effect: Efek glassmorphism di mode terang */
 .light .glass-effect {
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-/* .light #main-header.glass-effect: Efek glassmorphism untuk header di mode terang */
+
 .light #main-header.glass-effect {
   background: rgba(255, 255, 255, 0.75);
 }
 
-/* Buttons & Links */
-/* .light .hover\\:text-white:hover: Warna teks saat hover di mode terang */
 .light .hover\:text-white:hover {
   color: #0f172a;
 }
-/* .light .border-slate-600: Warna border di mode terang */
+
 .light .border-slate-600 {
-  border-color: #cbd5e1; /* slate-300 */
+  border-color: #cbd5e1;
   color: #334155;
 }
-/* .light .border-slate-600:hover: Warna border saat hover di mode terang */
+
 .light .border-slate-600:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  border-color: #94a3b8; /* slate-400 */
+  border-color: #94a3b8;
 }
-/* .light .text-slate-400, .light #open-theme-settings, .light #mobile-menu-button, .light #theme-toggle, .light #mobile-theme-toggle: Warna teks tombol di mode terang */
+
 .light .text-slate-400,
 .light #open-theme-settings,
 .light #mobile-menu-button,
@@ -794,7 +733,7 @@ body.light::before {
 .light #mobile-theme-toggle {
   color: #475569;
 }
-/* .light #open-theme-settings:hover, .light #mobile-menu-button:hover, .light #theme-toggle:hover, .light #mobile-theme-toggle:hover: Warna tombol saat hover di mode terang */
+
 .light #open-theme-settings:hover,
 .light #mobile-menu-button:hover,
 .light #theme-toggle:hover,
@@ -802,95 +741,84 @@ body.light::before {
   color: #0f172a;
 }
 
-/* Cards & Borders */
-/* .light .border-slate-700, .light #about img: Border di mode terang */
 .light .border-slate-700,
 .light #about img {
-  border-color: #e2e8f0; /* slate-200 */
+  border-color: #e2e8f0;
 }
-/* .light .border-slate-800: Border di mode terang */
+
 .light .border-slate-800 {
-  border-color: #e2e8f0; /* slate-200 */
+  border-color: #e2e8f0;
 }
-/* Social Media Icons - Light Mode Hover */
-/* .light a[target="_blank"]: Gaya untuk ikon media sosial di mode terang */
+
 .light a[target="_blank"] {
   background-color: #e2e8f0;
   color: #475569;
   transition: all 0.3s ease;
 }
-/* .light a[target="_blank"]:hover: Gaya hover untuk ikon media sosial di mode terang */
+
 .light a[target="_blank"]:hover {
   background-color: var(--accent-color);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
 }
-/* .light a[target="_blank"].hover\\:bg-slate-100:hover: Gaya spesifik untuk tombol GitHub di mode terang */
+
 .light a[target="_blank"].hover\:bg-slate-100:hover {
   background-color: #333333;
 }
-/* .light a[target="_blank"].hover\\:bg-\\[\\#0A66C2\\]:hover: Gaya spesifik untuk tombol LinkedIn di mode terang */
+
 .light a[target="_blank"].hover\:bg-\[\#0A66C2\]:hover {
   background-color: #0a66c2;
 }
-/* .light a[target="_blank"].hover\\:bg-pink-600:hover: Gaya spesifik untuk tombol Instagram di mode terang */
+
 .light a[target="_blank"].hover\:bg-pink-600:hover {
   background-color: #db2777;
 }
-/* .light .group .bg-slate-700: Warna background pada kartu di mode terang */
+
 .light .group .bg-slate-700 {
   background-color: #e2e8f0;
 }
-/* .light .text-xs.bg-slate-700: Warna tag teknologi di mode terang */
+
 .light .text-xs.bg-slate-700 {
   background-color: #e2e8f0;
   color: #334155;
 }
-/* .light .group:hover .bg-slate-700: Warna background saat hover di mode terang */
+
 .light .group:hover .bg-slate-700 {
   background-color: var(--accent-color);
   color: #fff;
 }
 
-/* Form */
-/* .light input, .light textarea: Gaya untuk input di mode terang */
 .light input,
 .light textarea {
   background-color: rgba(255, 255, 255, 0.5);
   border-color: #cbd5e1;
   color: #0f172a;
 }
-/* .light input::placeholder, .light textarea::placeholder: Gaya placeholder di mode terang */
+
 .light input::placeholder,
 .light textarea::placeholder {
   color: #94a3b8;
 }
 
-/* Scrollbar */
-/* .light ::-webkit-scrollbar-track: Gaya track scrollbar di mode terang */
 .light ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
-/* .light ::-webkit-scrollbar-thumb: Gaya thumb scrollbar di mode terang */
+
 .light ::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
   border-color: #f1f5f9;
 }
-/* .light ::-webkit-scrollbar-thumb:hover: Gaya thumb scrollbar saat hover di mode terang */
+
 .light ::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-color);
 }
 
-/* ========== LIGHT MODE STYLES END ========== */
-
-/* Service Cards Light Mode Fix */
-/* .light #services .glass-effect: Perbaikan untuk kartu layanan di mode terang */
 .light #services .glass-effect {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* .light #services .text-slate-100, .light #services .text-slate-200, .light #services .text-slate-300, .light #services .text-slate-400, .light #services .text-slate-500: Warna teks di kartu layanan mode terang */
+
 .light #services .text-slate-100,
 .light #services .text-slate-200,
 .light #services .text-slate-300,
@@ -899,13 +827,10 @@ body.light::before {
   color: #000000;
 }
 
-/* Portfolio Cards Light Mode Fix */
-/* .light #portfolio .text-slate-400: Perbaikan warna teks kartu portofolio di mode terang */
 .light #portfolio .text-slate-400 {
-  color: #0f172a; /* slate-900 untuk keterbacaan dan kontras yang lebih baik */
+  color: #0f172a;
 }
 
-/* Animated Project Cards */
 .project-card {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -920,12 +845,10 @@ body.light::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
   z-index: 1;
@@ -951,7 +874,6 @@ body.light::before {
   transform: translateY(-5px);
 }
 
-/* Card hover effects for portfolio and services */
 .portfolio-grid .group,
 .services-grid .group {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -963,7 +885,6 @@ body.light::before {
   box-shadow: 0 25px 50px -12px rgba(var(--accent-rgb), 0.25);
 }
 
-/* Enhanced hover effects for project cards */
 .portfolio-grid .group {
   transition: all 0.4s ease;
 }
@@ -973,7 +894,6 @@ body.light::before {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-/* Project card specific styling */
 .project-card-image {
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
@@ -991,7 +911,6 @@ body.light::before {
   color: var(--accent-color);
 }
 
-/* View Project link animation */
 .project-card .view-project-link {
   opacity: 0;
   transform: translateY(20px);
@@ -1028,51 +947,72 @@ h6,
 /* Modal Styles */
 /* .modal: Gaya dasar untuk modal */
 .modal {
-  display: none; /* Awalnya disembunyikan */
+  display: none;
+  /* Awalnya disembunyikan */
   position: fixed;
-  z-index: 1000; /* Di atas konten lain */
+  z-index: 1000;
+  /* Di atas konten lain */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Agar bisa scroll jika konten terlalu panjang */
-  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang gelap transparan */
-  backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+  overflow: auto;
+  /* Agar bisa scroll jika konten terlalu panjang */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Latar belakang gelap transparan */
+  backdrop-filter: blur(5px);
+  /* Efek blur pada latar belakang */
 }
+
 /* .modal-content: Gaya konten modal */
 .modal-content {
-  background-color: rgba(30, 41, 59, 0.95); /* Latar belakang konten modal */
-  backdrop-filter: blur(20px); /* Efek blur pada konten modal */
-  margin: 5% auto; /* Pusatkan secara vertikal */
-  padding: 0; /* Tanpa padding karena ditangani oleh elemen dalam */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Border halus */
-  border-radius: 16px; /* Sudut membulat */
-  width: 90%; /* Lebar responsif */
-  max-width: 800px; /* Lebar maksimum */
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Bayangan dalam */
-  animation: modalFadeIn 0.3s ease-out; /* Animasi muncul */
+  background-color: rgba(30, 41, 59, 0.95);
+  /* Latar belakang konten modal */
+  backdrop-filter: blur(20px);
+  /* Efek blur pada konten modal */
+  margin: 5% auto;
+  /* Pusatkan secara vertikal */
+  padding: 0;
+  /* Tanpa padding karena ditangani oleh elemen dalam */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Border halus */
+  border-radius: 16px;
+  /* Sudut membulat */
+  width: 90%;
+  /* Lebar responsif */
+  max-width: 800px;
+  /* Lebar maksimum */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  /* Bayangan dalam */
+  animation: modalFadeIn 0.3s ease-out;
+  /* Animasi muncul */
 }
+
 /* @keyframes modalFadeIn: Animasi muncul modal */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
     transform: scale(0.9) translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
 }
+
 /* .modal-header: Header modal */
 .modal-header {
   padding: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
+
 /* .modal-body: Isi modal */
 .modal-body {
   padding: 24px;
 }
+
 /* .close: Tombol tutup modal */
 .close {
   position: absolute;
@@ -1084,24 +1024,29 @@ h6,
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 /* .close:hover, .close:focus: Gaya hover/fokus tombol tutup */
 .close:hover,
 .close:focus {
   color: var(--accent-color);
 }
+
 /* .light .modal-content: Gaya konten modal di mode terang */
 .light .modal-content {
   background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 /* .light .modal-header: Header modal di mode terang */
 .light .modal-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 /* .light .close: Tombol tutup modal di mode terang */
 .light .close {
   color: #475569;
 }
+
 /* .light .close:hover, .light .close:focus: Gaya hover/fokus tombol tutup di mode terang */
 .light .close:hover,
 .light .close:focus {
@@ -1131,14 +1076,94 @@ h6,
 
 /* Footer Light Mode */
 .light footer .border-slate-800 {
-  border-color: #e2e8f0; /* slate-200 */
+  border-color: #e2e8f0;
+  /* slate-200 */
 }
 
 /* Footer Social Icons Light Mode */
 .light footer .bg-slate-800 {
-  background-color: #e2e8f0; /* slate-200 */
+  background-color: #e2e8f0;
+  /* slate-200 */
 }
 
 .light footer .text-slate-400 {
-  color: #475569; /* slate-600 */
+  color: #475569;
+  /* slate-600 */
+}
+
+/* Main Header Styling */
+#main-header {
+  background: rgba(15, 23, 42, 0.92); /* Increased opacity for better visibility */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease; /* Smooth transition for background changes */
+}
+
+#main-header.glass-effect {
+  background: rgba(30, 41, 59, 0.85); /* Increased opacity for better visibility */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.light #main-header,
+.light #main-header.glass-effect {
+  background: rgba(255, 255, 255, 0.92); /* Increased opacity for better visibility */
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Menu Styling - Dark Mode */
+#mobile-menu {
+  background: rgba(30, 41, 59, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+#mobile-menu a {
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+#mobile-menu a:hover {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #ffffff;
+}
+
+#mobile-theme-toggle {
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+#mobile-theme-toggle:hover {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #ffffff;
+}
+
+/* Mobile Menu Styling - Light Mode */
+.light #mobile-menu {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light #mobile-menu a {
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.light #mobile-menu a:hover {
+  background: rgba(139, 92, 246, 0.1) !important;
+  color: #0f172a;
+}
+
+.light #mobile-theme-toggle {
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.light #mobile-theme-toggle:hover {
+  background: rgba(139, 92, 246, 0.1) !important;
+  color: #0f172a;
 }
